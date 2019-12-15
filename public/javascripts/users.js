@@ -8,13 +8,12 @@ document.addEventListener("DOMContentLoaded", (qwe) => {
     
 
     //Отправка запроса начинается с этого перона
-    $.ajax({
-      type: "POST", //Тип запроса. ОТправляет в теле какие-то данные на сервер
+    axios({
+      method: "POST", //Тип запроса. ОТправляет в теле какие-то данные на сервер
       url: "/api", //Путь по которому отправляются данные на сервер...
       data: "name=" + formObject.name + "&text=" + formObject.text, //Тело запроса
-      success: function (msg){ //Функция обработки в случае успеха
-        alert( msg.text ); //окошко
-      }
+    }).then(function (msg){ //Функция обработки в случае успеха
+      alert('Новый посетитель №' + (msg && msg.data.text) ); //окошко
     });
   });     
 });

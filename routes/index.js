@@ -6,7 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/api',(req,res,next)=>{
+router.post('/api', (req, res, next)=>{
+  console.log(req, res, next);
   let {name,text} = req.body; //данные из тела запроса
   let answer = {status:"",text:""}; //переменная для ответа
   if(name&&text){
