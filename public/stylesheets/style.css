@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+body {
+	display: block;
+	background-color : #ccc;
+	height: 100%;
+	color: #333;
+	font-family: "Segoe UI", Arial, sans-serif;
+	font-size: 0.9em;
+	line-height: 135%;
+}
